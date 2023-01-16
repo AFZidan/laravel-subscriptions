@@ -6,7 +6,7 @@ namespace AFZidan\Subscriptions\Providers;
 
 use AFZidan\Subscriptions\Models\Plan;
 use Illuminate\Support\ServiceProvider;
-use AFZidan\Support\Traits\ConsoleTools;
+use  Rinvex\Support\Traits\ConsoleTools;
 use AFZidan\Subscriptions\Models\Feature;
 use AFZidan\Subscriptions\Models\PlanSubscription;
 use AFZidan\Subscriptions\Models\PlanSubscriptionUsage;
