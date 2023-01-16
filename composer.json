@@ -1,6 +1,6 @@
 {
-    "name": "rinvex/laravel-subscriptions",
-    "description": "Rinvex Subscriptions is a flexible plans and subscription management system for Laravel, with the required tools to run your SAAS like services efficiently. It's simple architecture, accompanied by powerful underlying to afford solid platform for your business.",
+    "name": "afzidan/laravel-subscriptions",
+    "description": "AFZidan Subscriptions is a flexible plans and subscription management system for Laravel, with the required tools to run your SAAS like services efficiently. It's simple architecture, accompanied by powerful underlying to afford solid platform for your business.",
     "type": "library",
     "keywords": [
         "plan",
@@ -14,14 +14,14 @@
     "license": "MIT",
     "homepage": "https://rinvex.com",
     "support": {
-        "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/laravel-subscriptions/issues",
-        "source": "https://github.com/rinvex/laravel-subscriptions",
-        "docs": "https://github.com/rinvex/laravel-subscriptions/blob/master/README.md"
+        "email": "help@hizidan.com",
+        "issues": "https://github.com/afzidan/laravel-subscriptions/issues",
+        "source": "https://github.com/afzidan/laravel-subscriptions",
+        "docs": "https://github.com/afzidan/laravel-subscriptions/blob/master/README.md"
     },
     "authors": [
         {
-            "name": "Rinvex LLC",
+            "name": "rinvex LLC",
             "homepage": "https://rinvex.com",
             "email": "help@rinvex.com"
         },
@@ -33,14 +33,14 @@
         },
         {
             "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/laravel-subscriptions/contributors"
+            "homepage": "https://github.com/afzidan/laravel-subscriptions/contributors"
         }
     ],
     "require": {
         "php": "^8.0.0",
-        "illuminate/console": "^9.0.0 || ^10.0.0",
-        "illuminate/database": "^9.0.0 || ^10.0.0",
-        "illuminate/support": "^9.0.0 || ^10.0.0",
+        "illuminate/console": "^8.0.0 || ^9.0.0 || ^10.0.0",
+        "illuminate/database": "^8.0.0 || ^9.0.0 || ^10.0.0",
+        "illuminate/support": "^8.0.0 || ^9.0.0 || ^10.0.0",
         "rinvex/laravel-support": "^6.0.0",
         "spatie/eloquent-sortable": "^4.0.0",
         "spatie/laravel-sluggable": "^3.3.0",
@@ -48,17 +48,17 @@
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.31.0",
-        "illuminate/container": "^9.0.0 || ^10.0.0",
+        "illuminate/container": "^8.0.0 || ^9.0.0 || ^10.0.0",
         "phpunit/phpunit": "^9.5.0"
     },
     "autoload": {
         "psr-4": {
-            "Rinvex\\Subscriptions\\": "src"
+            "AFZidan\\Subscriptions\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rinvex\\Subscriptions\\Tests\\": "tests"
+            "AFZidan\\Subscriptions\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -72,7 +72,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rinvex\\Subscriptions\\Providers\\SubscriptionsServiceProvider"
+                "AFZidan\\Subscriptions\\Providers\\SubscriptionsServiceProvider"
             ]
         }
     },
