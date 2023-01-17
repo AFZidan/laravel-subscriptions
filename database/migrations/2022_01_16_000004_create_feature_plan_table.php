@@ -12,8 +12,11 @@ class CreateFeaturePlanTable extends Migration
     {
         if (Schema::hasColumn(config('afzidan.subscriptions.tables.features'), 'plan_id')) {
             Schema::table(config('afzidan.subscriptions.tables.features'), function (Blueprint $table) {
-                $table->dropForeign('plan_id');
-                $table->dropColumn('plan_id');
+                if(Schema::hasColumn(config('afzidan.subscriptions.tables.features'),'plan_id')){
+
+                    $table->dropForeign(['plan_id']);
+                    $table->dropColumn('plan_id');
+                }
             });
         }
 
