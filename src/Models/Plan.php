@@ -83,7 +83,9 @@ class Plan extends Model implements Sortable
         'name',
         'description',
         'is_active',
+        'published',
         'price',
+        'annual_discount',
         'signup_fee',
         'currency',
         'trial_period',
@@ -105,7 +107,9 @@ class Plan extends Model implements Sortable
     protected $casts = [
         'slug' => 'string',
         'is_active' => 'boolean',
+        'published' => 'boolean',
         'price' => 'float',
+        'annual_discount' => 'float',
         'signup_fee' => 'float',
         'currency' => 'string',
         'trial_period' => 'integer',
@@ -177,7 +181,9 @@ class Plan extends Model implements Sortable
             'name' => 'required|string|strip_tags|max:150',
             'description' => 'nullable|string|max:32768',
             'is_active' => 'sometimes|boolean',
+            'published' => 'sometimes|boolean',
             'price' => 'required|numeric',
+            'annual_discount' => 'nullable|numeric',
             'signup_fee' => 'required|numeric',
             'currency' => 'required|alpha|size:3',
             'trial_period' => 'sometimes|integer|max:100000',
@@ -260,6 +266,27 @@ class Plan extends Model implements Sortable
     public function isFree(): bool
     {
         return (float) $this->price <= 0.00;
+    }
+
+    /**
+     * Check if plan is Published.
+     *
+     * @return bool
+     */
+    public function isPublished(): bool
+    {
+        return (boolean) $this->published;
+    }
+
+    /**
+     * Scope a query to only include published plans.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopePublished($query)
+    {
+        return $query->where('published',true);
     }
 
     /**

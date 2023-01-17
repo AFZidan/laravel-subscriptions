@@ -73,9 +73,6 @@ class Feature extends Model implements Sortable
      */
     protected $casts = [
         'slug' => 'string',
-        'value' => 'string',
-        'resettable_period' => 'integer',
-        'resettable_interval' => 'string',
         'sort_order' => 'integer',
         'deleted_at' => 'datetime',
     ];
