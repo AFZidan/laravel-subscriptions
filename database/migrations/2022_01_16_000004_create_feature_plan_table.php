@@ -21,8 +21,8 @@ class CreateFeaturePlanTable extends Migration
         }
 
         Schema::create(config('afzidan.subscriptions.tables.feature_plan'), function (Blueprint $table) {
-            $table->integer('plan_id');
-            $table->integer('feature_id');
+            $table->unsignedInteger('plan_id');
+            $table->unsignedInteger('feature_id');
             $table->string('value');
             $table->unsignedSmallInteger('resettable_period')->default(0);
             $table->string('resettable_interval')->default('month');
