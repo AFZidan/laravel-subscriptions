@@ -1,12 +1,13 @@
 <?php
 
 declare(strict_types=1);
+namespace AFZidan\Subscriptions\Database\Migrations;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterPlansTable extends Migration
+class AlterPlansTableAddPublishedAndAnnualDiscount extends Migration
 {
     public function up(): void
     {
