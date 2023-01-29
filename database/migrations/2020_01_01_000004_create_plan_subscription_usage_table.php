@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-namespace AFZidan\Subscriptions\Database\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
