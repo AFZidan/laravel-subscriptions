@@ -236,7 +236,7 @@ class Plan extends Model implements Sortable
     public function features(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(
-            config('afzidan.subscriptions.models.plan_feature'),
+            config('afzidan.subscriptions.models.feature'),
             config('afzidan.subscriptions.tables.feature_plan'),
             'plan_id',
             'feature_id'
