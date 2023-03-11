@@ -12,7 +12,7 @@ class AlterFeaturesTable extends Migration
     {
         if (Schema::hasColumn(config('afzidan.subscriptions.tables.features'), 'plan_id')) {
             Schema::table(config('afzidan.subscriptions.tables.features'), function (Blueprint $table) {
-                    $table->dropForeign(['plan_id']);
+                    $table->dropUnique(['plan_id', 'slug']);
                     $table->dropColumn('plan_id');
                     $table->dropColumn('value');
                     $table->dropColumn('resettable_period');
